@@ -3,7 +3,9 @@ from django.shortcuts import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Fernando Murashima',
+    })
 
 def sobre(request):
     return HttpResponse("uma linda resposta! - SOBRE novo")
